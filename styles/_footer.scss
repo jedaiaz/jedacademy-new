@@ -1,0 +1,227 @@
+footer{
+    position: relative;
+    border-top: 1px solid #225B94;
+    .logo div{
+        height: 35px;
+    }
+    img{
+        object-fit: contain !important;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        background-image: linear-gradient(to right, #ffcb68, #ccdb78, #70e2ea, #7ddff7, #92dafd, #a9d5fe, #b3d2fe, #becffc, #c8cbf9, #d2c8f4, #FDBFAD);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        filter: blur(116px);
+        opacity: 0.5;
+        z-index: -1;
+    }
+    padding-top: 60px;
+
+    
+    
+    .footer-subtitle{
+        font-size: 15px;
+    }
+    li{
+        position: relative;
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: $color2;
+            left: -10px;
+            top: 9px;
+        }
+        a{
+            display: inline-block;
+        }
+        a:hover{
+           padding-left: 8px;
+           color: black;
+        }
+    }
+    a, p{
+        font-weight: 500;
+        color: $color2;
+    }
+    svg{
+        color: $color2;
+    }
+    .copyright{
+        border-top: 1px solid #4E667D;
+        margin-top: 20px;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        p, a{
+            font-size: 14px;
+            position: relative;
+        }
+        a{
+            display: flex;
+        }
+        a>div{
+         
+            width: 80px;
+            margin-left: 6px !important;
+        }
+        img{
+            height: 14px !important;
+        }
+    }   
+    
+
+    .logo{
+        display: inline-block;
+        width: 195px;
+    }
+    .footer-subtitle{
+        margin-top: 20px;
+    }
+    .footer-contact{
+        div, p{
+            margin-bottom: 13px;
+        }
+        a{
+            display: inline-block;
+        }
+        a:hover{
+            transform: translateX(8px);
+            color: $color2;
+        }
+    }
+    .footer-phone{
+        display: flex;
+        flex-wrap: wrap;
+        a:first-child{
+            margin-right: 30px;
+        }
+    }
+}
+
+.social-links{
+    margin-bottom: 40px;
+    margin-top: 20px;
+    a{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: $color2;
+        border:1px solid $color2;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 10px 10px 20px #B4C1D5, inset 5px 5px 7px #136AC3;
+        svg{
+            color: white;
+            font-size: 22px;
+            transition: $transition;
+        }
+        &:not(:last-child){
+            margin-right: 20px;
+        }
+        &:hover{
+            background: white;
+            box-shadow: none;
+            svg{
+                color: $color2;
+            }
+        }
+    }
+} 
+
+.wp-btn, .top-btn, .phone-btn, .tg-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $color2;
+    border: 1px solid $color2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition;
+    position: fixed;
+    right: 50px;
+    bottom: 70px;
+    cursor: pointer;
+    z-index: 1000;
+    &:before, &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        border: 1px solid $color2;
+        z-index: -1;
+        opacity: 0; 
+        -webkit-animation: pulse-border-2 1s linear infinite;
+        -moz-animation: pulse-border-2 1s linear infinite;
+        -ms-animation: pulse-border-2 1s linear infinite;
+        animation: pulse-border-2 1s linear infinite; 
+
+    }
+    &:after{
+        -webkit-animation: pulse-border 1.4s linear infinite;
+        -moz-animation: pulse-border 1.4s linear infinite;
+        -ms-animation: pulse-border 1.4s linear infinite;
+        animation: pulse-border 1.4s linear infinite; 
+
+    }
+    svg{
+        color: white;
+        font-size: 30px;
+    }
+    &:hover{
+        background: white;
+        svg{
+            color: $color2;
+        }
+    }
+}
+.wp-btn{
+    bottom: 210px;
+}
+.phone-btn{
+    bottom: 280px;
+}
+.tg-btn{
+    bottom: 140px;
+}
+
+@keyframes pulse-border-2 {
+    0% {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      opacity: 1; }
+    100% {
+      -webkit-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
+      opacity: 0; } }
+@keyframes pulse-border {
+    0% {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      opacity: 1; }
+    100% {
+      -webkit-transform: scale(1.8);
+      -moz-transform: scale(1.8);
+      -ms-transform: scale(1.8);
+      transform: scale(1.8);
+      opacity: 0; } }
+  

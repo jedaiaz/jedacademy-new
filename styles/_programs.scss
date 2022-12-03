@@ -1,0 +1,324 @@
+.program-card.card{
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    max-width: 315px;
+    min-height: 554px;
+    margin: auto;
+    margin-bottom: 30px;
+    transition: $transition;
+    position: relative;
+    overflow: hidden;
+    z-index: 300;
+    .card-header{
+        background: linear-gradient(180deg, #2E78C4 0%, #214D79 100%);
+        border-radius: 15px 15px 0px 0px;
+        z-index: 1;
+        p{
+            color: white;
+            font-weight: 700;
+            font-size: 27px;
+            padding: 9px;
+        }
+    }
+    .card-body{
+        li{
+            position: relative;
+            color: #13385D;
+            font-weight: 500;
+            padding-left: 10px;
+            padding-bottom: 9px;
+            margin-bottom: 9px;
+            font-family: $font1;
+            span{
+                color: #13385D !important;
+                font-family: $font1 !important;
+                font-weight: 500;
+                font-size: 16px !important;
+            }
+            &::before{
+                content: '';
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: #13385D;
+                position: absolute;
+                left: 0px;
+                top: 10px;
+            }
+            &:not(:last-child){
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+    &:hover{
+        transform: translateY(-10px);
+        &:before {
+            left: 125%;
+        }
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.5)), to(transparent));
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+        -webkit-transform: skewX(-25deg);
+                transform: skewX(-25deg);
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+    
+}
+
+.program-card.last-card{
+    padding: 0 20px;
+    .months{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #22507D;
+        margin-top: 140px;
+        margin-bottom: 15px;
+    }
+    .card-price{
+        p:first-child{
+            font-weight: 400;
+            font-size: 17px;
+            color:#353434;
+            span:last-child{
+                color: #FF00D6;
+            }
+        }
+        color: #FFC500;
+        white-space: nowrap;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-size: 24px;
+        span:last-child{
+            color: #FF00D6;
+        }
+    }
+    .buttons{
+        .button{
+            padding: 10px 35px;
+            width: 100%;
+            // margin: 0 auto;
+            text-align: center;
+        }
+        .button:last-child{
+            margin-top:15px;
+            background: #27A249;
+            border-color: #27A249;
+            box-shadow: -10px -10px 20px #FFFFFF, 10px 10px 20px #B4C1D5, inset 3px 3px 4px #38C55F;
+            &:hover{
+                background: white;
+                color: #27A249;
+                box-shadow:none;
+            }
+        }
+
+    }
+    .title{
+        font-size:26px;
+        text-align: left;
+        margin-bottom: 35px !important;
+    }
+    .card-date{
+        color: #225A93;
+        font-weight: 500;
+        font-size: 19px;
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+        svg{
+            color: #225A93;
+            margin-right: 7px;
+        }
+    }
+    
+    .discount{
+        box-shadow: 0px 6px 20px rgba(83, 83, 83, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #D10000;
+        border: 1px solid #FFFFFF;
+        border-bottom: transparent;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        height: 90px;
+        padding: 5px 10px;
+        z-index: 10;
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 89px;
+            border-top: 29px solid #D10000;
+            border-left: 41px solid transparent;
+            border-right: 47px solid transparent;
+            z-index: 2;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 90px;
+            border-top: 29px solid white;
+            border-left: 41px solid transparent;
+            border-right: 47px solid transparent;
+        }
+        span{
+            color: white;
+            font-size: 13px;
+            z-index: 1;
+            font-weight: 500;
+            &:nth-child(2) {
+                font-size: 33px;
+                font-weight: 700;
+                color: #FFC500;
+            }
+        }
+    }
+}
+#programs{
+    position: relative;
+    padding-bottom: 10px;
+    &:before{
+        content: '';
+        background: url(../public/images/point.png) no-repeat;
+        max-width: 1207px;
+        width: 100%;
+        height: 760px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-size: contain;
+        z-index: -1;
+    }
+    div:empty:first-child{
+        position: absolute;        
+        max-width: 526px;
+        width: 100%;
+        height: 526px;
+        background: rgba(34, 166, 87, 0.5);
+        opacity: 0.7;
+        filter: blur(250px);
+        top: 200px;
+        left: 300px;
+        &:before{
+            content: '';
+            position: absolute;        
+            max-width: 400px;
+            width: 100%;
+            height: 400px;
+            background: radial-gradient(98.88% 100% at 60.51% 0%, #9CD9FC 0%, #43B2F2 100%);
+            top: 350px;
+            left: -235px;
+            z-index: 1;
+        }
+        &:after{
+            content: '';
+            position: absolute;        
+            max-width: 335px;
+            width: 100%;
+            height: 335px;
+            background: radial-gradient(98.88% 100% at 60.51% 0%, #FFCB68 0%, #F2903B 100%);
+            top: 550px;
+            left: 150px;
+        }
+    }
+    div:empty:nth-child(2){
+            position: absolute;        
+            max-width: 335px;
+            width: 100%;
+            height: 335px;
+            background: radial-gradient(98.88% 100% at 60.51% 0%, #FFCB68 0%, #F2903B 100%);
+            opacity: 0.5;
+            filter: blur(150px);
+            top: 400px;
+            right: 200px;
+        &:before{
+            content: '';
+            position: absolute;        
+            max-width: 419px;
+            width: 100%;
+            height: 419px;
+            background: radial-gradient(98.88% 100% at 60.51% 0%, #9CD9FC 0%, #43B2F2 100%);
+            top: 175px;
+            right: 240px;
+        }
+        &:after{
+            content: '';
+            position: absolute;    
+            max-width: 335px;
+            width: 100%;
+            height: 335px;
+            background: radial-gradient(98.88% 100% at 60.51% 0%, #FFCB68 0%, #F2903B 100%);
+            top: 350px;
+            right: 200px;
+        }
+    }
+    div:empty:nth-child(3){
+            position: absolute;
+            max-width: 419px;
+            width: 100%;
+            height: 419px;
+            background: #FDBFAD;
+            opacity: 0.5;
+            filter: blur(280px);
+            bottom: 300px;
+            right: 300px;
+    
+        &:before{
+            content: '';
+            position: absolute;        
+            max-width: 525px;
+            width: 100%;
+            height: 525px;
+            background: rgba(34, 166, 87, 0.5);
+            bottom: 0px;
+            right: -230px;
+        }
+    }
+    div:empty:nth-child(4){
+            position: absolute;
+            max-width: 335px;
+            width: 100%;
+            height: 335px;
+            background: radial-gradient(98.88% 100% at 60.51% 0%, #FFCB68 0%, #F2903B 100%);
+            opacity: 0.5;
+            filter: blur(200px);
+            bottom: 300px;
+            left: 0px;
+        &:before{
+            content: '';
+            position: absolute;        
+            max-width: 420px;
+            width: 100%;
+            height: 420px;
+            background: radial-gradient(98.88% 100% at 60.51% 0%, #9CD9FC 0%, #43B2F2 100%);
+            bottom: -100px;
+            left: 300px;
+        }
+    }
+    .program-title{
+        color: $color2;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 24px;
+    }
+    .title{
+        margin-bottom: 70px;
+    }
+    
+}

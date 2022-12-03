@@ -1,0 +1,185 @@
+#courses{
+    position: relative;
+    .title{
+        margin-bottom: 15px;
+    }
+    .subtitle{
+        max-width: 850px;
+        font-size: 15px;
+        margin: auto;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    &:before{
+        content: '';
+        position: absolute;        
+        max-width: 526px;
+        width: 100%;
+        height: 526px;
+        background: #D2C8F4;
+        opacity: 0.6;
+        filter: blur(200px);
+        bottom: 100px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    &:after{
+        content: '';
+        position: absolute;        
+        max-width: 526px;
+        width: 100%;
+        height: 526px;
+        background: rgba(34, 166, 87, 0.5);
+        opacity: 0.7;
+        filter: blur(350px);
+        top: 100px;
+        left: 0;
+
+    }
+    .row{
+        z-index: 1;
+        position: relative;
+    }
+    
+}
+
+
+.courses-card{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(113, 140, 193, 0.3);
+    border-radius: 10px !important;
+    padding:0;
+    border:none;
+    margin: auto;
+    margin-bottom: 30px;
+    transition: $transition;
+    max-width: 306px;
+    position: relative;
+    cursor: pointer;
+    &>div:first-child{
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        height: 200px;
+        min-height: 200px;
+        &>div:first-child{
+            border-radius: 10px 10px 0 0;
+            position: static !important;
+        }
+    }
+    img{
+        border-radius: 10px 10px 0 0;
+        object-fit:cover;
+    }
+    p{
+        color:#353434;
+    }
+    .discount{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid #FFFFFF;
+        border-bottom-color: transparent;
+        backdrop-filter: blur(20px);
+        position: absolute;
+        top: 0;
+        right: 10px;
+        height: 90px;
+        padding: 5px 10px;
+        z-index: 10;
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 89px;
+            border-top: 29px solid rgba(255, 255, 255, 0.7);
+            border-left: 44px solid transparent;
+            border-right: 47px solid transparent;
+        }
+        span{
+            color: #494C51;
+            font-size: 13px;
+            z-index: 1;
+            font-weight: 500;
+            &:nth-child(2) {
+                font-size: 33px;
+                font-weight: 700;
+                color: #FF0000;
+            }
+        }
+    }
+    .card-footer{
+        border-top: 1px solid #EBEBEB;
+        background: transparent;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        margin-top: 25px;
+        padding-bottom: 30px;
+        border-radius: 0px 0px 10px 10px !important;
+        .card-date{
+            padding-left: 16px;
+            font-weight: 500;
+            svg{
+                color: $color2;
+            }
+        }
+        .card-price{
+            padding-right: 16px;
+            span:first-child{
+                color: #F28E3B;
+            }
+            span:last-child{
+                color: #FF00D6;
+            }
+            p:first-child{
+                font-weight: 700;
+            }
+            p:last-child{
+                font-size: 13px;
+                text-align: right;
+                span{
+                    color: #FF00D6;
+                }
+            }
+        }
+    }
+
+    
+   
+    .card-title{
+        font-size: 21px;
+        font-weight: 600;
+        color: $color2;
+        margin-bottom: 12px;
+        min-height: 75px;
+    }
+    .card-subtitle{
+        color: #353434;
+        font-size: 14px;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        color: #69768b;
+        display: -webkit-box;
+        height: 63px;
+        margin-bottom: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &:hover{
+        transform: translateY(-10px);
+    }
+}
+
+.related{
+    .title{
+        text-align: left;
+    }
+    .btn-div{
+        position: relative;
+        z-index: 12;
+        text-align: center;
+    }
+}

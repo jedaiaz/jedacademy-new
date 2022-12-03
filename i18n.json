@@ -1,0 +1,9 @@
+{
+    "locales": ["az"],
+    "defaultLocale": "az",
+    "pages": {
+      "*": ["common"]
+    },
+    "localeDetection": false
+}
+
